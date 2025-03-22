@@ -10,7 +10,7 @@ const Navbar = () => {
     >
       
       <div className="flex gap-4">
-        {[ "Contact","About", "Projects","HireMe"].map((item) => (
+        {[ "Contact","About", "Projects","Hire"].map((item) => (
           <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-gray-400 transition">
             {item}
           </a>

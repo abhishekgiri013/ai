@@ -7,7 +7,7 @@ const About = () => {
     <div className="font-light">
       <section 
         id="about" 
-        className="py-20 px-6 sm:px-8 rounded-2xl border-2 shadow-2xl bg-black text-white min-h-screen flex flex-col items-center m-6 sm:m-20 hover:bg-black hover:scale-105 hover:shadow-2xl"
+        className="py-20 px-6 sm:px-8 rounded-2xl border-2 shadow-2xl bg-black text-white min-h-screen flex flex-col items-center m-6 sm:m-20 "
       >
         {/* Title Animation */}
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12">
@@ -43,10 +43,16 @@ const About = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-10 bg-gray-900 p-5 rounded-lg text-center sm:text-left">
-          <span className="bg-amber-300 rounded-sm p-1 text-black font-bold mr-2">Hire me</span>
-          Currently working on creative projects. Learn more →
-        </div>
+        <div
+  className="mt-10 bg-gray-900 p-5 rounded-lg text-center sm:text-left cursor-pointer transition-transform duration-300 hover:bg-gray-800 hover:scale-105"
+  onClick={() => document.getElementById("hire")?.scrollIntoView({ behavior: "smooth" })}
+>
+  <span className="bg-amber-300 rounded-sm p-1 text-black font-bold mr-2">
+    Hire me
+  </span>
+  Currently working on creative projects. Learn more →
+</div>
+
       </section>
     </div>
   );
